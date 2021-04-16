@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //pages
 Route::get('/',[PageController::class,'index'])->name('index');
+Route::get('/blogs',[PageController::class,'blogPage'])->name('blogs.index');
 
 //blog
 Route::resource('/blog',\App\Http\Controllers\BlogController::class);
